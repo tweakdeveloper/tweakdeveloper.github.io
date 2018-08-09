@@ -6,13 +6,15 @@
 
 @vertical-margins: 8px;
 @horizontal-margins: 16px;
-@half-horizontal-margins: @horizontal-margins / 2;
+@quarter-horizontal-margins: @horizontal-margins / 4;
 @default-margins: @vertical-margins @horizontal-margins;
+@quarter-margins: @vertical-margins / 4 @horizontal-margins / 4;
 
 @heading-fonts: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 @body-fonts: Lato, sans-serif;
 
 @phone: ~"only screen and (max-width: 479px)";
+@tiny-width: ~"only screen and (max-width: 355px)";
 
 html {
     background-color: whitesmoke;
@@ -55,6 +57,10 @@ hr {
         @theme-color-dark, @theme-color-light);
     border: 0;
     height: 1px;
+
+    @media @phone {
+        margin: 0;
+    }
 }
 
 nav {
@@ -68,11 +74,16 @@ nav {
 nav ul {
     margin: 0 auto;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    padding: 0 @half-horizontal-margins;
+    padding: 0 @quarter-horizontal-margins;
+
+    @media @tiny-width {
+        padding: @quarter-margins;
+    }
 }
 
 nav ul li a {
