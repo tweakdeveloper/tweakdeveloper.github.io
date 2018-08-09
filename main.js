@@ -4,7 +4,6 @@ function getAllNavLinks() {
 }
 
 function navigateToContent(event) {
-    event.preventDefault();
     var clickedLink = event.target;
     var sections = document.getElementsByTagName("section");
     var navRef = clickedLink.getAttribute("href");
@@ -33,5 +32,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
     for(var link = 0; link < navLinks.length; link++) {
         var navLink = navLinks[link];
         navLink.addEventListener("click", navigateToContent);
+    }
+    var navAddress = window.location.hash;
+    if(navAddress != null) {
+        for(var link = 0; link < navLinks.length; link++) {
+            var navLink = navLinks[link];
+            if(navLink.getAttribute("href") == navAddress) {
+                navLink.click();
+                break;
+            }
+        }
     }
 });
