@@ -72,8 +72,22 @@ nav ul li a {
 section {
   display: none;
   margin: 0;
-  padding: 8px 16px;
+  padding: 0;
   text-align: justify;
+}
+section p {
+  margin: 0;
+  padding: 8px 0;
+}
+@media only screen and (max-width: 479px) {
+  section p {
+    padding: 4px 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  section p:first-child {
+    padding-top: 8px;
+  }
 }
 .selected-content {
   display: initial;

@@ -5,6 +5,7 @@
 @theme-color-light: #666;
 
 @vertical-margins: 8px;
+@half-vertical-margins: @vertical-margins / 2;
 @horizontal-margins: 16px;
 @quarter-horizontal-margins: @horizontal-margins / 4;
 @default-margins: @vertical-margins @horizontal-margins;
@@ -98,8 +99,23 @@ nav ul li a {
 section {
     display: none;
     margin: 0;
-    padding: @default-margins;
+    padding: 0; 
     text-align: justify;
+}
+
+section p {
+    margin: 0;
+    padding: @vertical-margins 0;
+
+    @media @phone {
+        padding: @half-vertical-margins 0;
+    }
+}
+
+section p:first-child {
+    @media @phone {
+        padding-top: @vertical-margins;
+    }
 }
 
 .selected-content {
