@@ -8,7 +8,6 @@
 @half-vertical-margins: @vertical-margins / 2;
 @horizontal-margins: 16px;
 @quarter-horizontal-margins: @horizontal-margins / 4;
-@default-margins: @vertical-margins @horizontal-margins;
 @quarter-margins: @vertical-margins / 4 @horizontal-margins / 4;
 
 @heading-fonts: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
@@ -39,7 +38,7 @@ body {
 header {
     font-family: @heading-fonts;
     margin: 0;
-    padding: @default-margins; 
+    padding: @vertical-margins 0; 
     text-align: center;
 }
 
@@ -74,6 +73,7 @@ nav {
 }
 
 nav ul {
+    list-style-type: none;
     margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -84,6 +84,7 @@ nav ul li {
     padding: 0 @quarter-horizontal-margins;
 
     @media @tiny-width {
+        display: block;
         padding: @quarter-margins;
     }
 }
