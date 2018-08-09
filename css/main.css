@@ -68,6 +68,7 @@ nav ul li {
 nav ul li a {
   color: #999;
   text-decoration: none;
+  transition: color 0.5s;
 }
 .selected-tab {
   color: #333;
