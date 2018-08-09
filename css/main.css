@@ -1,0 +1,37 @@
+html {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 60%;
+}
+@media only screen and (max-width: 479px) {
+  body {
+    width: 80%;
+  }
+}
+header {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  margin: 0;
+  padding: 8px 16px;
+  text-align: center;
+}
+header h1,
+header h3 {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+header h1 {
+  font-weight: normal;
+}
+hr {
+  background: #333;
+  background-image: linear-gradient(to right, #666, #333, #666);
+  border: 0;
+  height: 1px;
+}

@@ -1,0 +1,49 @@
+@vertical-margins: 8px;
+@horizontal-margins: 16px;
+@default-margins: @vertical-margins @horizontal-margins;
+
+@heading-fonts: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+@body-fonts: Lato, sans-serif;
+
+@phone: ~"only screen and (max-width: 479px)";
+
+html {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: @body-fonts;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 60%;
+
+    @media @phone {
+        width: 80%;
+    }
+}
+
+header {
+    font-family: @heading-fonts;
+    margin: 0;
+    padding: @default-margins; 
+    text-align: center;
+}
+
+header h1, header h3 {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-weight: normal;
+}
+
+hr {
+    background: #333;
+    background-image: linear-gradient(to right, #666, #333, #666);
+    border: 0;
+    height: 1px;
+}
