@@ -12,6 +12,7 @@ body {
 }
 @media only screen and (max-width: 479px) {
   body {
+    font-weight: 400;
     width: 80%;
   }
 }
@@ -28,7 +29,7 @@ header h3 {
   padding: 0;
 }
 header h1 {
-  font-weight: normal;
+  font-weight: 400;
 }
 hr {
   background: #333;
@@ -87,6 +88,11 @@ section p {
 @media only screen and (max-width: 479px) {
   section p:first-child {
     padding-top: 8px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  section p:last-child {
+    padding-bottom: 8px;
   }
 }
 .selected-content {

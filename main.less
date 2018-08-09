@@ -31,6 +31,7 @@ body {
     width: 60%;
 
     @media @phone {
+        font-weight: 400;
         width: 80%;
     }
 }
@@ -49,7 +50,7 @@ header h1, header h3 {
 }
 
 header h1 {
-    font-weight: normal;
+    font-weight: 400;
 }
 
 hr {
@@ -115,6 +116,12 @@ section p {
 section p:first-child {
     @media @phone {
         padding-top: @vertical-margins;
+    }
+}
+
+section p:last-child {
+    @media @phone {
+       padding-bottom: @vertical-margins; 
     }
 }
 
