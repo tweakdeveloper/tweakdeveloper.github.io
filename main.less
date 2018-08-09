@@ -1,5 +1,12 @@
+@background-color: whitesmoke;
+@text-color: #000;
+@text-color-light: #999;
+@theme-color-dark: #333;
+@theme-color-light: #666;
+
 @vertical-margins: 8px;
 @horizontal-margins: 16px;
+@half-horizontal-margins: @horizontal-margins / 2;
 @default-margins: @vertical-margins @horizontal-margins;
 
 @heading-fonts: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
@@ -9,6 +16,7 @@
 
 html {
     background-color: whitesmoke;
+    color: @text-color;
     margin: 0;
     padding: 0;
 }
@@ -42,8 +50,47 @@ header h1 {
 }
 
 hr {
-    background: #333;
-    background-image: linear-gradient(to right, #666, #333, #666);
+    background: @theme-color-dark;
+    background-image: linear-gradient(to right, @theme-color-light, 
+        @theme-color-dark, @theme-color-light);
     border: 0;
     height: 1px;
+}
+
+nav {
+    display: flex;
+    font-weight: normal;
+    justify-content: center;
+    margin: 0;
+    padding: @vertical-margins 0;
+}
+
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 @half-horizontal-margins;
+}
+
+nav ul li a {
+    color: @text-color-light;
+    text-decoration: none;
+}
+
+.selected-tab {
+    color: @theme-color-dark;
+}
+
+section {
+    display: none;
+    margin: 0;
+    padding: @default-margins;
+    text-align: justify;
+}
+
+.selected-content {
+    display: initial;
 }
